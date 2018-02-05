@@ -1,3 +1,86 @@
 page-home {
+  ion-icon {
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+  }
+}
+
+.full-image {
+    padding-top: 14%;
+    display: block;
+    margin: 0 auto;
+}
+
+.icone{
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+
+}
+.tudo{
+    background-image: url("../assets/imgs/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+
+ion-footer {
+  height: 75px;
+  background-color: black;
+  opacity: 0.7;
+
+  ion-grid, ion-row, ion-col {
+      height: 100%;
+  }
+
+    ion-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.show {
+    position: fixed;
+    top: 46%;
+    background-color: black;
+    opacity: 0.7;
+
+}
+.letter{
+  color: white;
+
+}
+
+.twitter{
+  color: #00aced;
+}
+.facebook{
+  color: #3b5998;
+}
+
+.botoes{
+  position: fixed;
+  bottom: 15%;
+  text-align: center;
+}
+  .scroll-content{
+      overflow-y: auto !important;
+  }
+
+
+.social-button{
+  text-transform: none;
+  border-color: #77e0e0;
+  background-color: black;
+  opacity: 0.82;
+  color: white;
+
+
+}
+.texto{
+  padding-left: 3px;
 
 }

@@ -1,14 +1,56 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content no-bounce overflow-scroll="false" class="tudo">
+  <img class="full-image" src="assets/imgs/vinillogo.png">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<div>
+    <ion-card class="show"  *ngIf="!showToggle">
+        <ion-card-header class="letter">
+            <b>Você está ouvindo:</b>
+        </ion-card-header>
+        <ion-card-content class="letter">
+            {{info}}
+        </ion-card-content>
+    </ion-card>
+
+
+<div class="botoes">
+<a href="http://twitter.com/intent/tweet?text=Clique%20para%20ouvir&url=http%3A%2F%2Fstreaming21.hstbr.net%2Fplayer%2Fvinilfm%2F2018012414%2Fsocial-share&original_referer=http%3A%2F%2Fstreaming21.hstbr.net%2Fplayer%2Fvinilfm%2F">
+<button class = "social-button" ion-button round outline>
+  <ion-icon class="twitter" name="logo-twitter" item-start></ion-icon>
+  <p class="texto">Compartilhe pelo Twitter</p>
+</button>
+</a>
+<a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstreaming21.hstbr.net%2Fplayer%2Fvinilfm%2F2018012414%2Fsocial-share">
+<button class = "social-button" ion-button round outline>
+  <ion-icon class="facebook" name="logo-facebook" item-start></ion-icon>
+  <p class="texto">Compartilhe pelo Facebook</p>
+</button>
+</a>
+</div>
+
+  <ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-col width="33">
+  <button (click)="play(); toggle()" *ngIf="showToggle" color="light" clear ion-button icon-only>
+    <ion-icon class="icone" name="ios-play-outline"></ion-icon>
+  </button>
+
+  <button (click)="stop(); toggle()" *ngIf="!showToggle" color="light" clear ion-button icon-only>
+    <ion-icon class="icone" name="ios-pause-outline"></ion-icon>
+  </button>
+            </ion-col>
+
+
+
+          <ion-col width="33">
+<button (click)="goToSchedulePage()" color="light" clear ion-button icon-only>
+  <ion-icon name="ios-list-outline"></ion-icon>
+</button>
+          </ion-col>
+          </ion-row>
+
+      </ion-grid>
+
+  </ion-footer>
+</div>
 </ion-content>

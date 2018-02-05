@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar class="bar-dark">
+    <ion-title class="titulo" >Programação</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="tudo">
+  <ion-card  *ngFor="let item of lista">
+    <ion-card-content class="showschedule">
+      <ion-card-title class="letter">
+        {{item.title}}
+      </ion-card-title>
+      <ion-card-content class="letter">
+        {{item.description}}<br>
+          <ion-icon name="calendar" item-start></ion-icon> {{item.date}}
+        </ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
